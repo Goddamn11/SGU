@@ -26,5 +26,23 @@ int main()
 
         cout << endl;
     }
+    else
+    {
+        for (int i = 0; i < height; i++)
+        {
+            for (int j = 1; j < height - i; j++) cout << ' ';
+            for (int j = height - 2 * i; j <= height; j++)
+            {
+                if (i == height - 1)
+                {
+                    for (count = 0; count < i * 2 + 1; count++) cout << ch;
+                    break;
+                }
+                if (j == height - 2 * i || j == height - 1) cout << ch;
+                if (j > height - 2 * i || j < height - 1) cout << ' ';
+            }
+            cout << endl;
+        }
+    }
     return 0;
 }
